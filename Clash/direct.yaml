@@ -1,0 +1,31 @@
+payload:
+  # Private Domain
+  - DOMAIN-SUFFIX,smy.me
+  - DOMAIN-SUFFIX,smy.life
+  - DOMAIN-SUFFIX,hzj.life
+  - DOMAIN-SUFFIX,hzj.me
+  - DOMAIN-SUFFIX,juso.online
+  - DOMAIN-SUFFIX,660731.xyz
+  - DOMAIN-SUFFIX,seekmyself.net
+ 
+  # CN Games
+  - GEOSITE,category-games@cn
+
+  # IP Check
+  - DOMAIN-SUFFIX,myip.la
+  - DOMAIN-SUFFIX,ip.sb
+  - DOMAIN-SUFFIX,ipapi.co
+  - DOMAIN-SUFFIX,ip-api.com
+
+  # Synology
+  - DOMAIN,checkip.synology.com
+  - DOMAIN,checkipv6.synology.com
+  - DOMAIN-KEYWORD,ip2location
+  - DOMAIN-KEYWORD,quickconnect
+  - DOMAIN-SUFFIX,synology.com
+  
+  # CF Argo Tunnel
+  - DOMAIN-SUFFIX,argotunnel.com
+
+  # tzfile
+  - DOMAIN-SUFFIX,tzfile.com
