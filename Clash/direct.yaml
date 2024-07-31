@@ -7,6 +7,8 @@ payload:
   - DOMAIN-SUFFIX,juso.online
   - DOMAIN-SUFFIX,660731.xyz
   - DOMAIN-SUFFIX,seekmyself.net
+  - DOMAIN-SUFFIX,suyz.me
+  - DOMAIN-SUFFIX,syz.life
  
   # CN Games
   - GEOSITE,category-games@cn
@@ -16,6 +18,9 @@ payload:
   - DOMAIN-SUFFIX,ip.sb
   - DOMAIN-SUFFIX,ipapi.co
   - DOMAIN-SUFFIX,ip-api.com
+  - DOMAIN,blog.cloudflare.com
+  - DOMAIN,dash.cloudflare.com
+  - DOMAIN,cf-ns.com
 
   # Synology
   - DOMAIN,checkip.synology.com
