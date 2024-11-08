@@ -11,6 +11,7 @@ payload:
   - DOMAIN-SUFFIX,syz.life
  
   # CN Games
+  - GEOSITE,steam@cn
   - GEOSITE,category-games@cn
 
   # IP Check
