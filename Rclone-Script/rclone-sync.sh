@@ -20,7 +20,7 @@ LOG_FILE="$LOG_DIR/$JOB_NAME""_""$TIMESTAMP.log"
 function send_webhook() {
     # 构建错误消息
     local MESSAGE="$1"
-    local WEBHOOK_URL="https://push.smy.me/push/smy116?token=RGZeWJq3ZHfFMN6Z8KzySiszLnq65RW8"  # Webhook完整URL，不包含参数部分
+    local WEBHOOK_URL="https://push.smy.me/push/smy116?token="  # Webhook完整URL，不包含参数部分
 
     # 构建POST数据
     local POST_DATA="content=${MESSAGE}&title=${JOB_NAME}&channel=email"
