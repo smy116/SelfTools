@@ -1,0 +1,1 @@
+适用于rockchip平台的ffmpeg批量转码脚本
