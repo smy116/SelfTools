@@ -40,10 +40,10 @@ payload:
 
   # NTP Server
   - DOMAIN,time.apple.com
-  - DOMAIN,pool.ntp.org
+  - DOMAIN,time.windows.com
+  - DOMAIN-SUFFIX,pool.ntp.org
   - DOMAIN,ntp.ubuntu.com
   - DOMAIN-SUFFIX,ntp.org.cn
-  - DOMAIN-SUFFIX,openwrt.pool.ntp.org
 
 
   # 解决 Steam 下载 CDN 被定位到国外 CDN 的问题
