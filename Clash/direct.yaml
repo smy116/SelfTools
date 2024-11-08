@@ -9,6 +9,12 @@ payload:
   - DOMAIN-SUFFIX,seekmyself.net
   - DOMAIN-SUFFIX,suyz.me
   - DOMAIN-SUFFIX,syz.life
+
+  # microsoft@cn
+  - GEOSITE,microsoft@cn
+
+  # apple-cn
+  - GEOSITE,apple-cn
  
   # CN Games
   - GEOSITE,steam@cn
