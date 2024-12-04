@@ -26,6 +26,9 @@ payload:
   - DOMAIN-SUFFIX,ipapi.co
   - DOMAIN-SUFFIX,ip-api.com
   - DOMAIN,blog.cloudflare.com
+  - DOMAIN,developers.cloudflare.com
+  - DOMAIN,hostinger.com
+  - DOMAIN,ahrefs.com
   - DOMAIN,cf-ns.com
 
   # Synology
