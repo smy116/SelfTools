@@ -270,7 +270,7 @@ function set_coder() {
             elif [ "$ffmpeg_code" = "hevc" ]  ; then
                 ffmpeg_encode_cmd=(-c:v hevc_rkmpp)
             fi
-            _write_log "信息: 用户选择编解码方案: RockChip MPP硬件编解码 (默认)"
+            _write_log "信息: 用户选择编解码方案: RockChip MPP硬件编解码"
         ;;
         3)
             ffmpeg_decode="CPU" # 标记为CPU解码
@@ -306,7 +306,7 @@ function set_video_size() {
         ans="3"  # 静默模式默认选择 720P
         _write_log "信息: 静默模式，默认视频高度: 720p"
     else
-        echo "1. 4K (2160p)"
+        echo "1. 4K"
         echo "2. 1080P"
         echo "3. 720P (默认)"
         echo "4. 480P"
@@ -316,7 +316,7 @@ function set_video_size() {
     fi
 
     case "$ans" in
-        1) video_target_h=2160; _write_log "信息: 用户选择视频高度: 4K (2160p)";;
+        1) video_target_h=2160; _write_log "信息: 用户选择视频高度: 4K";;
         2) video_target_h=1080; _write_log "信息: 用户选择视频高度: 1080p";;
         3|"") video_target_h=720; _write_log "信息: 用户选择视频高度: 720p (默认)";; # "" 表示默认
         4) video_target_h=480; _write_log "信息: 用户选择视频高度: 480p";;
@@ -343,7 +343,6 @@ function set_video_size() {
     # scale_rkrga : RockChip RGA硬件加速缩放
     # format=nv12 : NV12是硬件处理中常见的像素格式
     # afbc=1 : 可能启用AFBC（ARM FrameBuffer Compression）以优化内存带宽，需硬件支持
-    # 注意: ffmpeg滤镜语法中，变量替换应在shell层面完成，然后将整个滤镜字符串传递给ffmpeg
     if [ "$ffmpeg_decode" = "CPU" ]; then
         # 软件解码后，可以使用CPU进行缩放，或如果后续是硬件编码，可能需要特定格式
         # format=yuv420p 是通用的选择
@@ -367,11 +366,11 @@ function set_video_bitrate() {
         input_kbps="2000"  # 静默模式默认选择 2000 kbps
         _write_log "信息: 静默模式，默认视频目标码率: ${input_kbps}kbps"
     else
-        echo "1. 1000 kbps (较低质量，适合网络传输)"
-        echo "2. 2000 kbps (默认，平衡质量与大小)"
-        echo "3. 4000 kbps (较高质量)"
-        echo "4. 6000 kbps (很高质量)"
-        echo "5. 8000 kbps (极高质量)"
+        echo "1. 1000 kbps"
+        echo "2. 2000 kbps"
+        echo "3. 4000 kbps"
+        echo "4. 6000 kbps"
+        echo "5. 8000 kbps"
         read -p "请输入选项或自定义码率 (kbps) [默认为2000]: " ans
         
         case "$ans" in
@@ -673,7 +672,7 @@ function show_help() {
     cat << EOF
 用法: $(basename "$0") [选项] [源目录或源文件] [目标目录]
 
-这是一个视频转码脚本，使用 ffmpeg 进行处理，并针对 RockChip MPP 硬件加速进行了优化。
+一个视频转码脚本，使用 ffmpeg 进行处理，并针对 RockChip MPP 硬件加速进行了优化。
 
 选项:
   --install      将 'transcode' 命令别名安装到您的 shell 配置文件中
